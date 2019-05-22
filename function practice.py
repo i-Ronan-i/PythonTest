@@ -3,7 +3,8 @@ and illustrates inputs, low level list manipulation for position
 and multiple loops with boolean triggers. """
 dead = False
 m = 0 
-xy = [0,0]
+#map position "in game"
+xy = [20,20]
 
 def func1():
     """docstring - lets make this do something basic 

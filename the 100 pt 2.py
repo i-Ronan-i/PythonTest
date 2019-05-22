@@ -1,6 +1,7 @@
-# getting today's date and changing it's format to match input
+# getting today's date
 from datetime import date
 today = date.today()
+#changes date format
 d1 = today.strftime("%d/%m/%Y")
 print("Today's date:", d1)
 
@@ -9,7 +10,7 @@ name = str(input("What is your name? "))
 dateob = str(input("DoB, {} you biatch? (dd/mm/yyyy) ".format(name.title())))
 
 # gets just the numerical parts of the date and DoB, for no real reason 
-# - could just use int(dateob[:]) function anyway
+# - could just use int(dateob[:]) function anyway I think.
 datetrans = (d1[0:2] + d1[3:5] + d1[6:10])
 dobtrans = (dateob[0:2] + dateob[3:5] + dateob[6:10])
 
@@ -21,6 +22,7 @@ if (int(datetrans[3:5]) - int(dobtrans[3:5])) >= 0 :
         #but the date hasn't passed.
         extrayear = False
 else :
+    #birthday hasn't passed otherwise
     extrayear = False
 
 if extrayear:
@@ -32,7 +34,7 @@ else :
     # to account for the birthday still to come this year
     diff = 100 - age - 1
 
-print ("{}, you are {} years old.".format(name,str(age)))
+print ("{}, you are {} years old, you dickhole".format(name,str(age)))
 bday100 = int(datetrans[4:]) + diff
 print ("You will turn 100 on " + dateob[0:6] + str(bday100))
 

@@ -1,8 +1,10 @@
 #odd or even
 
+#gets inputs for numerator and denominator.
 num = float(input("Geez a number..   "))
 check = float(input("Divide it by...?     "))
 
+#gets the remainded of the division.
 remainder = (num % check)
 
 if remainder == 0:

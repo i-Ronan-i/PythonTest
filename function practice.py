@@ -7,8 +7,7 @@ m = 0
 xy = [20,20]
 
 def func1():
-    """docstring - lets make this do something basic 
-    and pass it  onto the next function"""
+    # Asks user for direction input.
     global m  
     command = input("Which direction do you want to go? (N, W, S, E)  ").upper()
     if command == "N":
@@ -24,6 +23,7 @@ def func1():
         print("Invalid command!")
         func1()
 
+# This function adjusts the position in the xy list
 def movefunc(command, xy):
     print("You moved " + command)
     if command == "N":
@@ -35,6 +35,8 @@ def movefunc(command, xy):
     elif command == "E":
         xy[0] += 1
 
+# Initiated after a certain number of moves North.
+# A "robot" appears asking for assistance. 
 def randbot(dead):
     inv = True
     while inv == True:
@@ -52,6 +54,8 @@ def randbot(dead):
             print("Invalid command!")
             inv = True
 
+# Last function just deciding output message based on
+# interaction with the robot.
 def death(dead):
     if dead == True:
         print("game over bro")

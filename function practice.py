@@ -7,7 +7,7 @@ m = 0
 xy = [20,20]
 
 def func1():
-    # Asks user for direction input.
+    # Asks user for direction input...
     global m  
     command = input("Which direction do you want to go? (N, W, S, E)  ").upper()
     if command == "N":
